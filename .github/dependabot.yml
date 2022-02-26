@@ -1,0 +1,16 @@
+version: 2
+updates:
+  # Maintain dependencies for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      # Check for updates managed by npm once a week
+      interval: "weekly"
+      day: "saturday"
+      # Use Japan Standard Time (UTC +09:00)
+      timezone: "Asia/Tokyo"
+    reviewers:
+      - murnana
+    # Raise pull requests for version updates
+    # to npm against the `develop` branch
+    target-branch: "develop"
