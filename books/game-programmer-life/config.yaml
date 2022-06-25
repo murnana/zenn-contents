@@ -1,0 +1,8 @@
+title: "ゲームプログラマーとして生きる本"
+summary: "ゲーム制作におけるプログラマーとして生きていくためのTipsを集めただけの本です\n※随時更新予定"
+topics: ["ライフハック", "ゲーム開発"]
+published: false
+price: 0 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
+  - collect-tech-information
