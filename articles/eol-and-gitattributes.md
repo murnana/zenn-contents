@@ -3,7 +3,8 @@ title: "[Git] リポジトリで改行コードを正規化する"
 emoji: "📄"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["git"]
-published: false
+published: true
+published_at: 2022-08-11 20:00
 ---
 
 # 方法
