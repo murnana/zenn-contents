@@ -7,7 +7,7 @@ updates:
       interval: weekly
       # Use Japan Standard Time (UTC +09:00)
       timezone: "Asia/Tokyo"
-    target-branch: develop
+    target-branch: main
 
   # Maintain dependencies for npm
   - package-ecosystem: npm
@@ -21,4 +21,4 @@ updates:
       - murnana
     # Raise pull requests for version updates
     # to npm against the `develop` branch
-    target-branch: develop
+    target-branch: main
