@@ -10,7 +10,7 @@ published: true
 
 1. [`UnityEngine.PropertyAttribute`][PropertyAttribute] を継承したC#クラスを作成します (これを仮に、`SampleAttribute` とします)
 2. `SampleAttribute` を描画するためのクラスとして、[`UnityEditor.PropertyDrawer`][PropertyDrawer] を継承したクラスを作成します (仮に `SampleAttributeDrawer`とします)
-3. `SampleAttributeDrawer` に属性として [`UnityEditor.CustomPropertyDrawer`][CustomPropertyDrawer] をつけます。
+3. `SampleAttributeDrawer` に属性として [`UnityEditor.CustomPropertyDrawer`][CustomPropertyDrawer] をつけます
 4. [`UnityEditor.CustomPropertyDrawer`][CustomPropertyDrawer] のコンストラクターにある引数として、描画する対象の属性 (`SampleAttribute`) の型を与えます
 
 ```cs: SampleAttribute.cs
@@ -97,7 +97,7 @@ public class SampleAttributeDrawer : UnityEditor.PropertyDrawer
 ## UIToolKit (UIElements) で描画を行う
 :::message
 元となるウィンドウがUIelementで形成されない限り、この関数が使われることはありません。
-そのため、必ずIMGUIで描画する方も一緒に実装してください
+そのため、必ずIMGUIで描画する方も一緒に実装してください。
 :::
 
 1. [SampleAttributeDrawer.CreatePropertyGUI][PropertyDrawer.CreatePropertyGUI] を作成します

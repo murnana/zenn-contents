@@ -31,5 +31,7 @@ fi
 
 # 参考
 
+<!-- textlint-disable -->
 - [シェルスクリプトで数字かどうか判断する方法(exprだけじゃない](https://rcmdnk.com/blog/2018/09/05/computer-bash-zsh/)
 - [とほほのBash入門 - とほほのWWW入門](https://www.tohoho-web.com/ex/shell.html)
+<!-- textlint-enable -->

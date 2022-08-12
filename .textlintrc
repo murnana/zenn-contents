@@ -1,5 +1,13 @@
 {
-  "filters": {},
+  "filters": {
+    "comments": true,
+    "allowlist": {
+        "allow": [
+            ":::",
+            "/:::details\\s.*/",
+        ]
+    }
+  },
   "rules": {
       "preset-japanese": {
         "sentence-length": false
