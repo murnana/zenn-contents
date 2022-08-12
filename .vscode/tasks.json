@@ -2,12 +2,33 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "2.0.0",
+    "inputs": [
+        {
+          "id": "slug",
+          "type": "promptString",
+          "description": "artcile slug name"
+        },
+      ],
     "tasks": [
         {
-            "label": "Preview",
+            "label": "👀 Preview",
             "type": "shell",
-            "command": "zenn preview",
+            "command": "zenn",
+            "args": [
+                "preview"
+            ],
             "problemMatcher": [],
-        }
+        },
+        {
+            "label": "📝 Create new article",
+            "type": "shell",
+            "command": "npx",
+            "args": [
+                "zenn",
+                "new:article",
+                "--slug", "${input:slug}"
+            ],
+            "problemMatcher": [],
+        },
     ]
 }
