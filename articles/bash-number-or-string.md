@@ -6,7 +6,7 @@ topics: ["bash"]
 published: true
 ---
 
-
+a
 # 方法
 
 ```bash
