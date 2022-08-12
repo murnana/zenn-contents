@@ -30,7 +30,7 @@ Consoleウィンドウには、_TypeLoadException: Could not load type 'UnityEng
 
 UI ToolKit上では _Type_ 項目に `UnityEngine.Texture2D` と入れると、アセンブリ名は勝手に入ってきます。
 ![UI ToolKit上のObjectField](/images/unity-uielements-objectfield/add-from-ui-toolkit.jpg)*UI ToolKit上のObjectField*
-.uxml ファイル上では以下の形になります
+.uxml ファイル上では以下の形になります。
 ```xml:*.uxml
 <uie:ObjectField label="Texture" type="UnityEngine.Texture2D, UnityEngine.CoreModule" />
 ```
