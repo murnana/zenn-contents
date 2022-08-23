@@ -3,7 +3,7 @@ title: "[C#] 継承の書き方"
 emoji: "🔰"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["csharp"]
-published: false
+published: true
 ---
 
 # 継承を表す書き方
