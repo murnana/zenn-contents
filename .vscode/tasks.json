@@ -13,8 +13,9 @@
         {
             "label": "👀 Preview",
             "type": "shell",
-            "command": "zenn",
+            "command": "npx",
             "args": [
+                "zenn",
                 "preview"
             ],
             "problemMatcher": [],

@@ -7,6 +7,7 @@ on:
     paths:
       - '**.md'
 
+# Only cancel in-progress jobs or runs for the current workflow
 concurrency: 
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -15,9 +16,15 @@ permissions: {}
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    name: Build in ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-      - run: npm ci
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup Development Containers
+        uses: devcontainers/ci@v0.2.1900000118
       - run: npm run test
