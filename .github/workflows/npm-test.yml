@@ -26,5 +26,5 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Setup Development Containers
-        uses: devcontainers/ci@v0.2.1900000118
+        uses: devcontainers/ci@v0.2.1900000215
       - run: npm run test
