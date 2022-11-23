@@ -7,6 +7,8 @@ updates:
       interval: weekly
       # Use Japan Standard Time (UTC +09:00)
       timezone: "Asia/Tokyo"
+    reviewers:
+      - murnana
     target-branch: main
 
   # Maintain dependencies for npm
