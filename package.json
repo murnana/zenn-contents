@@ -18,12 +18,12 @@
   },
   "homepage": "https://github.com/murnana/zenn-contents#readme",
   "dependencies": {
-    "textlint": "^12.2.2",
+    "textlint": "^12.2.3",
     "textlint-filter-rule-allowlist": "^4.0.0",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-preset-ja-technical-writing": "^7.0.0",
     "textlint-rule-preset-japanese": "^7.0.0",
     "textlint-rule-preset-jtf-style": "^2.3.13",
-    "zenn-cli": "^0.1.131"
+    "zenn-cli": "^0.1.132"
   }
 }
