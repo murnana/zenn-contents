@@ -3,7 +3,8 @@ title: "[Unity] TEXTURE2D_ARGS と TEXTURE2D_PARAM"
 emoji: "🖼"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["unity"]
-published: false
+published: true
+published_at: 2022-11-23 19:00
 ---
 
 # 環境
