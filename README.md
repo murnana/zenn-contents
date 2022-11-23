@@ -1,5 +1,5 @@
 # Murnana's Zenn Articles & Books
 
-[![test](https://github.com/murnana/zenn-contents/actions/workflows/npm-test.yml/badge.svg)](https://github.com/murnana/zenn-contents/actions/workflows/npm-test.yml)
+[![Proofreading](https://github.com/murnana/zenn-contents/actions/workflows/proofreading.yml/badge.svg?branch=main)](https://github.com/murnana/zenn-contents/actions/workflows/proofreading.yml)
 
 * [📘 How to use Zenn CLI](https://zenn.dev/zenn/articles/zenn-cli-guide)
