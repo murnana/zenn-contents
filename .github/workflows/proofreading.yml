@@ -37,7 +37,7 @@ jobs:
         run: npm ci 
 
       - name: Setup reviewdog
-        uses: reviewdog/action-setup@v1.0.3
+        uses: reviewdog/action-setup@v1.0.4
         with:
           reviewdog_version: latest
 
