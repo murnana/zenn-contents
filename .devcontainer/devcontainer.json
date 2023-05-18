@@ -21,7 +21,8 @@
 				"ms-vscode-remote.remote-containers",
 				"yzhang.markdown-all-in-one",
 				"taichi.vscode-textlint",
-				"negokaz.zenn-editor"
+				"negokaz.zenn-editor",
+				"zenn.zenn-preview"
 			]
 		}
 	},
