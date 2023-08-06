@@ -13,16 +13,13 @@ published: false
 
 
 # 設定方法
-英語の場合、
-*Editor* > *General* > *Appearance* にある
-「Show whitespaces」がそれにあたります。
+<!-- textlint-disable jtf-style/4.3.7.山かっこ<> -->
+英語の場合、*Editor* > *General* > *Appearance* にある「Show whitespaces」がそれにあたります。
 ![Editor > General > Appearance](/images/articles/rider-show-whitespace-by-murnana/setting-en.gif)*「Show whitespaces」にチェックが入っている様子*
 
-日本語の場合、
-*エディター* > *一般* > *外観* にある
-「空白を表示」がそれにあたります。
+日本語の場合、*エディター* > *一般* > *外観* にある「空白を表示」がそれにあたります。
 ![エディター > 一般 > 外観](/images/articles/rider-show-whitespace-by-murnana/setting-jp.gif)*「空白を表示」にチェックが入っている様子*
-
+<!-- textlint-enable jtf-style/4.3.7.山かっこ<> -->
 
 
 
