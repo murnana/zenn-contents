@@ -23,7 +23,8 @@ Androidは、アプリケーションの識別子として **application ID** (*
 この性質があるため、開発者の多くは別の環境のアプリを作る場合、複数のIDを複数作ります。
 Android開発では、ビルド バリアントを使用してアプリケーション IDを変更することが多いです。
 
-しかし、アプリケーション IDは様々な場所で使われることが多いです。例えばプッシュ通知を使用する場合、権限が必要なのですが、権限名にアプリケーション IDが使われうることがあります。
+しかし、アプリケーション IDは様々な場所で使われることが多いです。
+例えばプッシュ通知を使用する場合、権限名にアプリケーション IDが使われます。
 ```xml:AndroidManifest.xml
 <permission android:name="${applicationId}.permission.C2D_MESSAGE" android:protectionLevel="signature" />
 <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
