@@ -3,7 +3,8 @@ title: "[Android] Gradleで設定するapplicationIdを、マニフェストフ�
 emoji: "🆔"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["android"]
-published: false
+published: true
+published_at: 2023-12-29 19:00
 ---
 
 # 使い方
