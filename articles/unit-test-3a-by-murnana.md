@@ -3,7 +3,8 @@ title: "3A – Arrange, Act, Assert とは"
 emoji: "ℹ️"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["test"]
-published: false
+published: true
+published_at: 2024-01-06 19:00
 ---
 
 Bill Wakeさんが提唱する、単体テストに適した3つのパターンです。
