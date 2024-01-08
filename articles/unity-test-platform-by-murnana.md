@@ -3,7 +3,8 @@ title: "[Unity] プラットフォーム別テスト"
 emoji: "🤖"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["unity"]
-published: false
+published: true
+published_at: 2024-01-13 19:00
 ---
 
 ## 概要
