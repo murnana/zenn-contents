@@ -1,0 +1,19 @@
+---
+title: 参考
+---
+- Unityブログより
+  - [Unleashing Animation and Audio | Unity Blog](https://blog.unity.com/technology/unleashing-animation-and-audio-2)
+  - [Timeline | Unity Blog](https://blog.unity.com/topic/timeline)
+    - 日本語 [タイムライン | Unity Blog](https://blog.unity.com/ja/topic/timeline)
+  - [Unity 2017.1 feature spotlight: Playable API | Unity Blog](https://blog.unity.com/technology/unity-2017-1-feature-spotlight-playable-api)
+  - [Help us test the new Timeline cut-scene and sequencing tool by joining the 2017.1 beta | Unity Blog](https://blog.unity.com/community/help-us-test-the-new-timeline-cut-scene-and-sequencing-tool-by-joining-the-2017-1-beta)
+    - 日本語 [新機能のタイムラインをUnity 2017.1ベータ版でお試しください！ | Unity Blog](https://blog.unity.com/ja/community/help-us-test-the-new-timeline-cut-scene-and-sequencing-tool-by-joining-the-2017-1-beta)
+  - - [Extending Timeline: A Practical Guide | Unity Blog](https://blog.unity.com/engine-platform/extending-timeline-practical-guide)
+    - 日本語 [Timeline の拡張 ― 実践ガイド | Unity Blog](https://blog.unity.com/ja/engine-platform/extending-timeline-practical-guide)
+  - [How to create custom Timeline Markers | Unity Blog](https://blog.unity.com/engine-platform/how-to-create-custom-timeline-markers)
+    - 日本語 [カスタム Timeline Marker の作成方法 | Unity Blog](https://blog.unity.com/ja/engine-platform/how-to-create-custom-timeline-markers)
+  - [How to use Timeline Signals | Unity Blog](https://blog.unity.com/engine-platform/how-to-use-timeline-signals)
+    - 日本語 [Timeline Signal の使用方法 | Unity Blog](https://blog.unity.com/ja/engine-platform/how-to-use-timeline-signals)
+- Unity マニュアルより
+  - [Unity - Manual: Playables API](https://docs.unity3d.com/Manual/Playables.html)
+  - https://docs.unity3d.com/Packages/com.unity.playablegraph-visualizer@0.2/manual/index.html
