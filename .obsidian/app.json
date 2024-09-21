@@ -1,0 +1,15 @@
+{
+  "livePreview": false,
+  "propertiesInDocument": "source",
+  "useMarkdownLinks": true,
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "articles",
+  "userIgnoreFilters": [
+    ".devcontainer/",
+    ".github/",
+    ".vscode/",
+    "node_modules/",
+    "package-lock.json",
+    "package.json"
+  ]
+}
