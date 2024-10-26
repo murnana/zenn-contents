@@ -41,7 +41,7 @@ iOSはこのIDの違いで同じアプリかを判断しています。
 
 公式ドキュメントにある「2つのパーツからなる文字列」は、チームID (Team ID) とバンドルID (Bundle ID) のことを指します。
 
-![app-id.svg](/images/articles/ios-bundle-id-by-murnana/app-id.svg)
+![app-id.svg](/images/articles/ios-bundle-id-by-murnana/app-id.webp)
 
 - [アプリIDを登録する - IDを管理する - アカウント - ヘルプ - Apple Developer](https://developer.apple.c/jp/help/account/manage-identifiers/register-an-app-id/)
 - [App ID](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/AppID.html)
