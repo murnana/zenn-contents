@@ -1,0 +1,12 @@
+title: "基礎から始める Unity Timeline"
+summary: |-
+  Unity Timelineを扱うことになったエンジニアへ。
+  私の知見が、役立ちますように。
+topics: ["unity"]
+published: false
+price: 0 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
+  - introduction
+  - what-playable-api
+  - references
