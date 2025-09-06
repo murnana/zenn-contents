@@ -4,15 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "ad8b99aff1edc2e9",
+        "id": "ddea3955376d14d1",
         "type": "tabs",
         "children": [
           {
-            "id": "31da1b3341a9cd70",
+            "id": "45199ec797a7e3c7",
             "type": "leaf",
             "state": {
               "type": "empty",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -34,8 +36,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -50,7 +55,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "検索"
             }
           },
           {
@@ -58,7 +65,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "ブックマーク"
             }
           }
         ]
@@ -88,7 +97,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "バックリンク"
             }
           },
           {
@@ -99,7 +110,9 @@
               "state": {
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "アウトゴーイングリンク"
             }
           },
           {
@@ -107,7 +120,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {},
+              "icon": "lucide-list",
+              "title": "アウトライン"
             }
           },
           {
@@ -119,7 +134,9 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-archive",
+              "title": "すべてのプロパティ"
             }
           }
         ]
@@ -131,10 +148,10 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "templates:テンプレートを挿入": false,
-      "command-palette:コマンドパレットを開く": false
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
-  "active": "31da1b3341a9cd70",
+  "active": "73a5427440d6bd05",
   "lastOpenFiles": []
 }

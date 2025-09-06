@@ -9,14 +9,14 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand":  "npm install -g npm@10.9.0 && npm install --save-dev",
+	"postCreateCommand":  "npm install -g npm@11.6.0 && npm install --save-dev && npm install -g @anthropic-ai/claude-code",
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"zenn.zenn-preview",
 				"yzhang.markdown-all-in-one",
-				"taichi.vscode-textlint"
+				"Anthropic.claude-code"
 			]
 		}
 	}
