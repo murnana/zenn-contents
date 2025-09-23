@@ -1,0 +1,10 @@
+{
+	"nodes":[
+		{"id":"d0647595cc3c8006","type":"group","x":20,"y":200,"width":360,"height":120,"label":"graph"},
+		{"id":"b3eafb0769673893","type":"text","text":"output","x":43,"y":234,"width":117,"height":53},
+		{"id":"bc39800d54d7c7fa","type":"text","text":"playable","x":223,"y":234,"width":127,"height":53}
+	],
+	"edges":[
+		{"id":"82441c3bfe655a5d","fromNode":"bc39800d54d7c7fa","fromSide":"left","toNode":"b3eafb0769673893","toSide":"right"}
+	]
+}
