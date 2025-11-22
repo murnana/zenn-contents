@@ -3,7 +3,8 @@ title: "Visual Studio Codeのターミナルにのみパスを通す方法"
 emoji: "⚙️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["vscode","terminal","環境変数"]
-published: false
+published: true
+published_at: 2025-11-22 19:00
 ---
 
 普段のターミナルまたはコンソールには不要でも、Visual Studio Codeに統合されたターミナルでパスを通しておきたい場合があります。
