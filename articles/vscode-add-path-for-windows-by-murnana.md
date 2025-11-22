@@ -2,7 +2,7 @@
 title: "Visual Studio Codeのターミナルにのみパスを通す方法"
 emoji: "⚙️"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["vscode"]
+topics: ["vscode","terminal","環境変数"]
 published: false
 ---
 
