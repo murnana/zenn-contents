@@ -15,9 +15,9 @@ CLIツールの実行などを行う場所である、ターミナルには二�
 - _Integrated terminal_ ... Visual Studio Codeに統合されたターミナル
 - _External terminal_ ... Visual Studio Codeの外側、コンピューターの環境設定で設定されているターミナル
   - Windowsの場合、cmd.exeやPowerShell、Windowsターミナルなど
-  - macOSの場合、コンソール.app など
+  - macOSの場合、ターミナルアプリなど
 
-この記事では、 _Integrated terminal_ でパスを通す方法についてを記述しています。
+この記事では、 _Integrated terminal_ でパスを通す方法について記述しています。
 :::
 
 ## コンピューター毎、OS毎にパスを通す
@@ -35,7 +35,7 @@ Visual Studio Codeの設定項目に、 `terminal.integrated.env.<platform>` と
 
 
 ## ターミナルのプロファイル毎にパスを通す
-上記設定はどのプロファイルでも通しますが、ターミナルのプロファイル毎に設定することもできます。
+上記設定はどのプロファイルでも通しますが、ターミナルのプロファイル毎に設定できます。
 
 その設定は `terminal.integrated.profiles.<platform>.<profile_name>.env` の中になります。
 
@@ -48,7 +48,7 @@ Visual Studio Codeの設定項目に、 `terminal.integrated.env.<platform>` と
         "env": {
             "PATH": "${env:USERPROFILE}\\.claude\\local\\node_modules\\.bin;${env:PATH}"
         }
-    },
+    }
 }
 ```
 
