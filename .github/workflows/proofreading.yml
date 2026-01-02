@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '.devcontainer/*'
+      - '.devcontainer/ci/devcontainer.json'
       - '.github/workflows/proofreading.yml'
       - '**.md'
       - 'package.json'
@@ -27,16 +27,17 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
 
       - name: Setup reviewdog
-        uses: reviewdog/action-setup@v1.5.0
+        uses: reviewdog/action-setup@d8a7baabd7f3e8544ee4dbde3ee41d0011c3a93f
         with:
           reviewdog_version: latest
 
       - name: Run Dev Container
-        uses: devcontainers/ci@v0.3
+        uses: devcontainers/ci@8bf61b26e9c3a98f69cb6ce2f88d24ff59b785c6
         with:
+          configFile: "./.devcontainer/ci/devcontainer.json"
           runCmd: npx textlint -f checkstyle './{articles,books}/*.md' >> .textlint.log
 
       - name: Run reviewdog

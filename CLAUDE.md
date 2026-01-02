@@ -63,19 +63,53 @@ published_at: 2023-01-14 19:00  # optional
 
 ## Development Environment
 
-Dev Containers with:
-- Node.js 20 (Bullseye)
+This repository provides two purpose-specific Dev Container environments.
+
+### Writing Environment (`.devcontainer/write/`)
+
+Full-featured development environment for article writing and editing.
+
+**Features:**
+- Node.js 22 (Debian Bookworm)
+- Claude Code CLI integrated (AI writing assistance)
 - VS Code extensions:
-  - `zenn.zenn-preview`
-  - `yzhang.markdown-all-in-one`
-  - `Anthropic.claude-code`
+  - `zenn.zenn-preview` (real-time preview)
+  - `yzhang.markdown-all-in-one` (Markdown editing support)
+  - `Anthropic.claude-code` (AI integration)
+- Claude authentication credentials auto-mounted
+- Security hardening (non-root execution, capability restrictions)
+
+**Usage:**
+```bash
+# Open in VS Code
+code .
+# Command Palette (Ctrl+Shift+P)
+# Select "Dev Containers: Reopen in Container"
+# Choose ".devcontainer/write/devcontainer.json"
+```
+
+### CI Environment (`.devcontainer/ci/`)
+
+Lightweight environment optimized for textlint execution in GitHub Actions.
+
+**Features:**
+- Node.js 22 (Debian Bookworm)
+- Minimal dependencies (textlint only)
+- No extensions (fast startup)
+- No mount configurations (CI compatibility)
+- Security hardening (non-root execution, capability restrictions)
+
+**Purpose:**
+- GitHub Actions PR checks (automated)
+- Local CI environment reproduction for testing
 
 ## CI/CD
 
 `proofreading.yml` workflow on PRs to `main`:
-- Triggers on `.md`, package, workflow changes
-- Runs textlint in Dev Container
+- Triggers on `.md`, package, workflow changes, and `.devcontainer/ci/` changes
+- Runs textlint in CI Dev Container (`.devcontainer/ci/devcontainer.json`)
 - Uses reviewdog for PR comments
+- Actions pinned to commit SHA for supply chain security
 
 ## textlint Configuration
 
