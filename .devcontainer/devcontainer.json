@@ -1,25 +1,113 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
+// ========================================
+// Dev Container設定ファイル
+// ========================================
+// このファイルは、VS CodeでDockerコンテナ内で開発環境を構築するための設定です。
+// Dev Containerを使うと、チーム全員が同じ開発環境で作業できます。
+// 詳細: https://aka.ms/devcontainer.json
 {
-	"name": "Node.js",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye",
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand":  "npm install -g npm@11.6.0 && npm install --save-dev && npm install -g @anthropic-ai/claude-code",
-	// Configure tool-specific properties.
+	// ----------------------------------------
+	// 基本設定
+	// ----------------------------------------
+
+	// コンテナの表示名（VS Codeのリモートエクスプローラーに表示される名前）
+	"name": "Zenn Contents",
+
+	// 使用するDockerイメージ
+	// Microsoft公式のNode.js 22開発コンテナイメージを使用
+	// - Node.js 22: JavaScriptランタイム環境
+	// - Debian 12 (bookworm): 安定したLinuxディストリビューション
+	// - 1: メジャーバージョン（自動で最新のパッチバージョンが適用されます）
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+
+	// ----------------------------------------
+	// 追加機能（Features）
+	// ----------------------------------------
+	// コンテナに追加でインストールする開発ツールを指定します。
+	// Dev Container Featuresは、再利用可能な開発環境のコンポーネントです。
+	"features": {
+		// Claude Code CLI: AnthropicのAI開発アシスタント
+		// Zenn記事の執筆やコードレビューをAIがサポートします
+		"ghcr.io/anthropics/devcontainer-features/claude-code:1": {}
+	},
+
+	// ----------------------------------------
+	// ネットワーク設定
+	// ----------------------------------------
+	// ポートフォワーディング設定
+	// コンテナ内で動作するWebサーバーなどのポートを、
+	// ローカルマシンのブラウザからアクセスできるようにします。
+	//
+	// 例: Zennプレビューサーバー (npx zenn preview) はポート8000を使用
+	// 必要に応じて以下のコメントを外してください:
+	// "forwardPorts": [8000],
+
+	// ----------------------------------------
+	// ライフサイクルコマンド
+	// ----------------------------------------
+	// コンテナ作成後に自動実行するコマンド
+	// npm依存パッケージ（zenn-cli、textlintなど）を自動インストールします。
+	// --save-dev: 開発時のみ必要なパッケージとしてインストール
+	"postCreateCommand": "git config --global --add safe.directory /workspaces/zenn-contents && npm install --save-dev",
+
+	// ----------------------------------------
+	// VS Code カスタマイゼーション
+	// ----------------------------------------
+	// VS Code固有の設定（拡張機能、設定など）
 	"customizations": {
 		"vscode": {
+			// コンテナ内で自動インストールする拡張機能
+			// 開発に必要な拡張機能がチームで統一されます
 			"extensions": [
-				"zenn.zenn-preview",
-				"yzhang.markdown-all-in-one",
-				"Anthropic.claude-code"
+				"zenn.zenn-preview",              // Zenn記事のリアルタイムプレビュー表示
+				"yzhang.markdown-all-in-one",     // Markdown編集支援（目次生成、ショートカットなど）
+				"Anthropic.claude-code"           // Claude Code統合（AI支援開発）
 			]
 		}
-	}
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+	},
+
+	// ========================================
+	// セキュリティ設定
+	// ========================================
+	// コンテナのセキュリティを強化するための設定群です。
+	// これらの設定により、万が一コンテナが侵害されても被害を最小限に抑えられます。
+
+	// 非rootユーザーとして実行
+	// - rootユーザー: システムの全権限を持つ特権ユーザー（危険）
+	// - nodeユーザー: 通常の権限しか持たないユーザー（安全）
+	// rootで実行すると、悪意のあるコードがシステム全体を制御できてしまうため、
+	// 通常ユーザー「node」として実行することで権限を制限します。
+	"remoteUser": "node",
+
+	// Linuxケイパビリティの制限
+	// Linuxケイパビリティ: rootの権限を細かく分割した特殊な権限
+	// 空の配列 = 追加の特権を一切付与しない
+	// これにより、ネットワーク設定変更やシステム時刻変更などの
+	// 危険な操作ができないようになります。
+	"capAdd": [],
+
+	// 権限昇格の禁止
+	// no-new-privileges: プロセスが自分より高い権限を取得することを禁止
+	// 例: setuidプログラム（通常ユーザーがroot権限で実行できるプログラム）を
+	// 実行しても、root権限が得られないようにします。
+	// これにより、コンテナ内での権限昇格攻撃を防ぎます。
+	"securityOpt": ["no-new-privileges=true"],
+
+	// ----------------------------------------
+	// ファイルシステムマウント
+	// ----------------------------------------
+	// ホストマシンのファイルをコンテナ内で利用できるようにします。
+	// Claude Codeの設定と認証情報を共有するために必要です。
+	"mounts": [
+		// Claude Code設定ディレクトリのマウント
+		// - source: ホストマシンのホームディレクトリ配下の.claudeフォルダ
+		// - target: コンテナ内の/home/node/.claude
+		// - type=bind: ホストとコンテナでファイルを同期
+		// 注意: 認証情報を含むため、このディレクトリを公開リポジトリにコミットしないでください
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.claude,target=/home/node/.claude,type=bind",
+
+		// Claude Code認証情報ファイルのマウント
+		// APIキーなどの機密情報が保存されます
+		// 注意: .claude.jsonファイルは絶対に他人と共有しないでください
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.claude.json,target=/home/node/.claude.json,type=bind"
+	]
 }

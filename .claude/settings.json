@@ -1,7 +1,15 @@
 {
   "includeCoAuthoredBy": true,
   "permissions": {
-    "disableBypassPermissionsMode": "disable"
+    "disableBypassPermissionsMode": "disable",
+    "allow": [
+      "Bash(npx textlint:*)"
+    ],
+    "deny": [
+      "Read(/home/node/.claude.json)",
+      "Read(/home/node/.claude.json*)"
+    ],
+    "ask": []
   },
   "disableAllHooks": true,
   "enableAllProjectMcpServers": false
