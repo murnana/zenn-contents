@@ -5,9 +5,10 @@ on:
     branches:
       - main
     paths:
-      - '.devcontainer/ci/devcontainer.json'
+      - '.devcontainer/*'
       - '.github/workflows/proofreading.yml'
-      - '**.md'
+      - 'articles/*/**.md'
+      - 'books/*/**.md'
       - 'package.json'
       - 'package-lock.json'
 
@@ -37,7 +38,7 @@ jobs:
       - name: Run Dev Container
         uses: devcontainers/ci@8bf61b26e9c3a98f69cb6ce2f88d24ff59b785c6
         with:
-          configFile: "./.devcontainer/ci/devcontainer.json"
+          configFile: "./.devcontainer/devcontainer.json"
           runCmd: npx textlint -f checkstyle './{articles,books}/*.md' >> .textlint.log
 
       - name: Run reviewdog

@@ -10,7 +10,7 @@
 	// ----------------------------------------
 
 	// コンテナの表示名（VS Codeのリモートエクスプローラーに表示される名前）
-	"name": "Zenn Contents - CI",
+	"name": "Zenn Contents",
 
 	// 使用するDockerイメージ
 	// Microsoft公式のNode.js 22開発コンテナイメージを使用
@@ -18,6 +18,19 @@
 	// - Debian 12 (bookworm): 安定したLinuxディストリビューション
 	// - 1: メジャーバージョン（自動で最新のパッチバージョンが適用されます）
 	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+
+	// ----------------------------------------
+	// 追加機能（Features）
+	// ----------------------------------------
+	// コンテナに追加でインストールする開発ツールを指定します。
+	// Dev Container Featuresは、再利用可能な開発環境のコンポーネントです。
+	"features": {
+		// Claude Code CLI: AnthropicのAI開発アシスタント
+		// Zenn記事の執筆やコードレビューをAIがサポートします
+		"ghcr.io/anthropics/devcontainer-features/claude-code:1": {},
+		// GitHub CLI（gh コマンド）— リリース作業や PR 操作に使います
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
 
 	// ----------------------------------------
 	// ネットワーク設定
@@ -37,6 +50,22 @@
 	// npm依存パッケージ（zenn-cli、textlintなど）を自動インストールします。
 	// --save-dev: 開発時のみ必要なパッケージとしてインストール
 	"postCreateCommand": "npm install --save-dev",
+
+	// ----------------------------------------
+	// VS Code カスタマイゼーション
+	// ----------------------------------------
+	// VS Code固有の設定（拡張機能、設定など）
+	"customizations": {
+		"vscode": {
+			// コンテナ内で自動インストールする拡張機能
+			// 開発に必要な拡張機能がチームで統一されます
+			"extensions": [
+				"zenn.zenn-preview",              // Zenn記事のリアルタイムプレビュー表示
+				"yzhang.markdown-all-in-one",     // Markdown編集支援（目次生成、ショートカットなど）
+				"Anthropic.claude-code"           // Claude Code統合（AI支援開発）
+			]
+		}
+	},
 
 	// ========================================
 	// セキュリティ設定

@@ -1,6 +1,6 @@
 {
   "livePreview": false,
-  "propertiesInDocument": "source",
+  "propertiesInDocument": "visible",
   "useMarkdownLinks": true,
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "articles",
@@ -11,5 +11,12 @@
     "node_modules/",
     "package-lock.json",
     "package.json"
-  ]
+  ],
+  "strictLineBreaks": true,
+  "autoConvertHtml": false,
+  "newLinkFormat": "relative",
+  "alwaysUpdateLinks": false,
+  "trashOption": "local",
+  "showInlineTitle": false,
+  "promptDelete": false
 }

@@ -10,15 +10,15 @@
   "properties": true,
   "page-preview": true,
   "daily-notes": false,
-  "templates": true,
-  "note-composer": true,
+  "templates": false,
+  "note-composer": false,
   "command-palette": true,
   "slash-command": false,
   "editor-status": true,
   "bookmarks": true,
   "markdown-importer": false,
   "zk-prefixer": false,
-  "random-note": false,
+  "random-note": true,
   "outline": true,
   "word-count": true,
   "slides": false,
@@ -27,5 +27,7 @@
   "file-recovery": false,
   "publish": false,
   "sync": false,
-  "webviewer": false
+  "webviewer": false,
+  "footnotes": false,
+  "bases": false
 }
