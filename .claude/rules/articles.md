@@ -66,8 +66,3 @@ When reviewing articles, check the following:
    - Terminology (e.g., "Visual Studio Code" not abbreviated in body)
    - Katakana long vowels (コンピューター with ー)
    - Number formatting
-
-### Commit Convention
-- Initial commit: "Add article about [topic]"
-- Review fixes: "Fix article review issues" with detailed list
-- Include bilingual descriptions when appropriate
