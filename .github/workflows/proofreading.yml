@@ -5,10 +5,10 @@ on:
     branches:
       - main
     paths:
-      - '.devcontainer/*'
+      - '.devcontainer/**'
       - '.github/workflows/proofreading.yml'
-      - 'articles/*/**.md'
-      - 'books/*/**.md'
+      - 'articles/*.md'
+      - 'books/**/*.md'
       - 'package.json'
       - 'package-lock.json'
 
