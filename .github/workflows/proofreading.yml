@@ -22,21 +22,21 @@ permissions: {}
 jobs:
   textlint:
     name: Check from Textlint
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     permissions:
       pull-requests: write 
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd #v6.0.2
 
       - name: Setup reviewdog
-        uses: reviewdog/action-setup@d8a7baabd7f3e8544ee4dbde3ee41d0011c3a93f
+        uses: reviewdog/action-setup@d8a7baabd7f3e8544ee4dbde3ee41d0011c3a93f #v1.5.0
         with:
           reviewdog_version: latest
 
       - name: Run Dev Container
-        uses: devcontainers/ci@b63b30de439b47a52267f241112c5b453b673db5
+        uses: devcontainers/ci@b63b30de439b47a52267f241112c5b453b673db5 #v0.3.1900000449
         with:
           configFile: "./.devcontainer/devcontainer.json"
           runCmd: npx textlint -f checkstyle './{articles,books}/*.md' >> .textlint.log
