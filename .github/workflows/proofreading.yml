@@ -22,7 +22,7 @@ permissions: {}
 jobs:
   textlint:
     name: Check from Textlint
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     permissions:
       pull-requests: write 
 
