@@ -1,0 +1,14 @@
+{
+	"nodes":[
+		{"id":"cd5c67af7b085ba8","type":"group","x":-260,"y":-160,"width":660,"height":200,"label":"graph"},
+		{"id":"a43cdb978216d094","type":"text","text":"output","x":-237,"y":-87,"width":113,"height":50},
+		{"id":"cac61d64227a995d","type":"text","text":"parentPlayable","x":-40,"y":-87,"width":169,"height":50},
+		{"id":"f91476a8f3685ab8","type":"text","text":"playableA","x":236,"y":-37,"width":141,"height":50},
+		{"id":"d06b1cbab1eff935","type":"text","text":"playableB","x":236,"y":-137,"width":141,"height":50}
+	],
+	"edges":[
+		{"id":"b2e1975fcee31a43","fromNode":"f91476a8f3685ab8","fromSide":"left","toNode":"cac61d64227a995d","toSide":"right"},
+		{"id":"63ca2de7e0af7081","fromNode":"d06b1cbab1eff935","fromSide":"left","toNode":"cac61d64227a995d","toSide":"right"},
+		{"id":"7f4b4c26efbf1cb4","fromNode":"cac61d64227a995d","fromSide":"left","toNode":"a43cdb978216d094","toSide":"right"}
+	]
+}
