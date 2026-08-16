@@ -1,0 +1,13 @@
+title: "私のClaude Codeのつかいかた"
+summary: |
+  トークンって何? といった基本的な説明から、
+  SKILL.md を作るときに工夫していること、など
+  細かい話までをつめた本です。
+topics: ["claude"] # トピック（5つまで）
+published: false
+price: 0 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
+  - preface
+  - what-token
+  - what-context
