@@ -31,5 +31,16 @@
             ],
             "problemMatcher": [],
         },
+        {
+            "label": "📕 Create new book",
+            "type": "shell",
+            "command": "npx",
+            "args": [
+                "zenn",
+                "new:book",
+                "--slug", "${input:slug}"
+            ],
+            "problemMatcher": [],
+        },
     ]
 }
